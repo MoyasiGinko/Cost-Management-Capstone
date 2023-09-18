@@ -6,4 +6,15 @@
 <% end %>
 <p><strong>Total Transactions Amount:</strong> <%= number_to_currency(@category.transactions.sum(:amount)) %></p>
 
+<%= link_to "Edit", edit_category_path(@category) %>
+
+<%= form_with(model: @category, method: :delete, local: false) do |form| %>
+  <%= form.submit "Delete", data: { confirm: "Are you sure you want to delete this category?" } %>
+<% end %>
+
+<h3>Transactions</h3>
+<%= link_to "View Transactions", category_transactions_path(@category) %>
+<br>
+
+
 <%= link_to "Back to Categories", categories_path %>

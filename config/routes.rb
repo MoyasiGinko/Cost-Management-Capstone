@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     root to: 'welcome#index', as: :unauthenticated_root
   end
 
-  resources :categories, only: [:index, :show, :new, :create, :destroy] do
+  resources :categories, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :transactions, only: [:index, :show, :new, :create, :destroy]
   end
 

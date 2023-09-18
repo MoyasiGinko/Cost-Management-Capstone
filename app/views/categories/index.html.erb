@@ -9,11 +9,8 @@
       <% end %>
       <strong>Total Transactions Amount:</strong> <%= number_to_currency(category.transactions.sum(:amount)) %><br>
       <%= link_to "View Transactions", category_transactions_path(category) %>
-      <%= link_to "View Category", category_path(category) %>
-      
-      <%= form_with url: category_path(category), method: :delete, remote: true do |form| %>
-        <%= form.submit "Delete" %>
-      <% end %>
+      <%= link_to "More", category_path(category) %>
+
     </li>
   <% end %>
 </ul>
