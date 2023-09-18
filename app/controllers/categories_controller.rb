@@ -22,8 +22,6 @@ class CategoriesController < ApplicationController
     @transactions = @category.transactions
   end
 
-
-
   private
 
   def category_params
