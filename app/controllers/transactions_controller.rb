@@ -26,6 +26,16 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.find(params[:id])
   end
 
+  def destroy
+    @transaction = Transaction.find(params[:id])
+    @category = @transaction.category
+    if @transaction.destroy
+      redirect_to category_transactions_path(@category), notice: 'Transaction was successfully deleted.'
+    else
+      redirect_to category_transactions_path(@category), alert: 'Failed to delete transaction.'
+    end
+  end
+
   private
 
   def transaction_params

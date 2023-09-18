@@ -14,9 +14,11 @@ Rails.application.routes.draw do
     root to: 'welcome#index', as: :unauthenticated_root
   end
 
-  resources :categories, only: [:index, :new, :create] do
-    resources :transactions, only: [:index, :show, :new, :create]
+  resources :categories, only: [:index, :show, :new, :create, :destroy] do
+    resources :transactions, only: [:index, :show, :new, :create, :destroy]
   end
+
+  # delete 'categories/:id', to: 'categories#destroy', as: :category
 
   
   # Remove the following line as it's redundant
