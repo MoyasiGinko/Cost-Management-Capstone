@@ -21,7 +21,7 @@
         <td><%= number_to_currency(transaction.amount) %></td>
         <td><%= transaction.category.name %></td>
         <td>
-          <%= link_to 'Show', category_transaction_path(transaction.category, transaction) %>
+          <%= link_to 'Modify', category_transaction_path(transaction.category, transaction) %>
           <%= form_with url: category_transaction_path(transaction.category, transaction), method: :delete, remote: true do |form| %>
             <%= form.submit "Delete" %>
           <% end %>

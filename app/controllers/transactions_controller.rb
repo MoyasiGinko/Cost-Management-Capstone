@@ -24,6 +24,7 @@ class TransactionsController < ApplicationController
 
   def show
     @transaction = Transaction.find(params[:id])
+    @category = @transaction.category
   end
 
   def destroy
@@ -35,6 +36,22 @@ class TransactionsController < ApplicationController
       redirect_to category_transactions_path(@category), alert: 'Failed to delete transaction.'
     end
   end
+
+  def edit
+    @category = Category.find(params[:category_id])
+    @transaction = Transaction.find(params[:id])
+  end
+
+  def update
+    @transaction = Transaction.find(params[:id])
+    if @transaction.update(transaction_params)
+      redirect_to category_transactions_path(@transaction.category), notice: 'Transaction was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+
 
   private
 
