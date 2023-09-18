@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DashboardController < ApplicationController
   before_action :authenticate_user! # Ensures only authenticated users can access the dashboard
 
