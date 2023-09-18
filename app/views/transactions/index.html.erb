@@ -1,0 +1,30 @@
+<h1>Transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.name %></td>
+        <td><%= number_to_currency(transaction.amount) %></td>
+        <td><%= transaction.category.name %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Transaction', new_category_transaction_path(category_id: @category.id) %><br>
+<%= link_to 'Back to Categories', categories_path %>
+
+
+
+
+
