@@ -68,6 +68,8 @@
       <nav>
           <ul>
               <li><%= link_to 'Dashboard', root_path %></li>
+              <li><%= link_to 'Categories', categories_path %></li>
+              <!-- Change the line below to link to category's transactions -->
               <!-- Add links for your resources here -->
               <li><%= link_to 'Profile', edit_user_registration_path %></li>
               <li><%= button_to 'Sign out', destroy_user_session_path, method: :delete %></li>
