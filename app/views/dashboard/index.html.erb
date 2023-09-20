@@ -1,4 +1,40 @@
-<!-- app/views/dashboard/index.html.erb -->
-<h1>Welcome to Your Dashboard</h1>
-<p>Hello, <%= @user.name %>!</p>
-<!-- Add more content as needed -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Welcome to Your Dashboard</h1>
+            <p>Hello, <%= @user.name %>!</p>
+        </div>
+
+        <div class="user-profile">
+            <img src="https://github.com/MoyasiGinko/Cost-Management-Capstone/assets/108092696/c78134ef-badd-4ae3-98ac-0e657fd60620" alt="User Profile Image" class="profile-image">
+            <p class="profile-name"><%= @user.name %></p>
+            <p class="profile-details">Email: <%= @user.email %></p>
+            <p class="profile-details">Member Since: <%= @user.created_at.strftime('%B %d, %Y') %></p>
+        </div>
+
+        <a href="<%= categories_path %>" class="dashboard-links">
+            <h2>Got to CMS</h2>
+        </a>
+        <div class="dashboard-content">
+            <h2>Your Recent Activity</h2>
+            <ul class="activities">
+                <% @recent_transactions.each do |transaction| %>
+                <li class="activity-card">
+                    <%= transaction.name %> - <%= number_to_currency(transaction.amount) %>
+                    <span class="transaction-date">
+                    <%= time_ago_in_words(transaction.created_at) %> ago
+                    </span>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

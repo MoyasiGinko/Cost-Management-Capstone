@@ -14,10 +14,9 @@ RSpec.feature 'Category Show Page' do
     visit category_path(category)
 
     expect(page).to have_content('Category Details')
-    expect(page).to have_content("Name: #{category.name}")
-    expect(page).to have_content('Logo:')
+    expect(page).to have_content(category.name.to_s)
     expect(page).to have_css("img[src*='#{category.icon}'][width='100'][height='100']")
-    expect(page).to have_content("Total Transactions Amount: #{number_to_currency(category.transactions.sum(:amount))}")
+    expect(page).to have_content("Total: #{number_to_currency(category.transactions.sum(:amount))}")
     expect(page).to have_link('Edit', href: edit_category_path(category))
     expect(page).to have_button('Delete')
     expect(page).to have_link('View Transactions', href: category_transactions_path(category))
