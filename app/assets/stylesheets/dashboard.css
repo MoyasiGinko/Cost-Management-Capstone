@@ -93,7 +93,6 @@ p {
   background-color: #0056b3; /* Background color on hover */
 }
 
-
 /* Responsive styles (for screens up to 600px) */
 @media screen and (max-width: 600px) {
   h1 {
@@ -120,14 +119,6 @@ p {
   .dashboard-content {
     padding: 15px;
   }
-}
-
-/* Dashboard Content Styles */
-.dashboard-content {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 5px;
-  margin-top: 20px;
 }
 
 /* Recent Activity List Styles */

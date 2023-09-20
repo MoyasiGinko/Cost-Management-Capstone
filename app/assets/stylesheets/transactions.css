@@ -226,7 +226,6 @@
   }
 }
 
-
 /* Base styles for Transaction Details page */
 .show-transaction-heading {
   font-size: 2rem;
@@ -309,10 +308,7 @@
   }
 }
 
-
 /* CSS styles for Edit Transaction page */
-
-/* Base styles */
 .edit-transaction-heading {
   text-align: center;
   font-size: 1.5rem;
