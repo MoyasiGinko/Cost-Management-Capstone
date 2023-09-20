@@ -1,0 +1,379 @@
+/* Base styles for Categories list (for screens wider than 600px) */
+#categories-list {
+  background-color: #33333315;
+}
+
+#categories-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-item {
+  margin: 10px 0;
+}
+
+.category-card {
+  background-color: rgba(13, 107, 248, 0.11); /* Soft background color with transparency */
+  margin: 0 2px;
+  padding: 20px;
+  border-radius: 12px; /* Slightly rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Improved shadow */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.category-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.category-logo {
+  flex: 0 0 100px;
+}
+
+.category-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.category-name {
+  font-weight: bold;
+  color: #333; /* Darker text for better contrast */
+}
+
+.category-amount {
+  margin-top: 10px;
+  color: #239b55; /* Slightly darker text */
+}
+
+.category-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.category-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.category-link:hover {
+  color: #0056b3;
+}
+
+.add-category-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Smooth button hover */
+}
+
+.add-category-link:hover {
+  background-color: #0056b3; /* Darker button on hover */
+}
+
+/* Responsive styles (for screens up to 600px) */
+@media screen and (max-width: 600px) {
+  #categories-heading {
+    font-size: 1.5rem;
+  }
+
+  .category-card {
+    padding: 15px;
+  }
+
+  .category-logo {
+    flex: 0 0 80px;
+    margin-bottom: 10px;
+  }
+
+  .category-name {
+    font-size: 1.2rem;
+  }
+
+  .category-amount {
+    font-size: 1rem;
+  }
+
+  .category-link {
+    font-size: 1rem;
+    margin-right: 0;
+    margin-top: 5px;
+  }
+
+  .add-category-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* Base styles for larger screens */
+.category-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.category-input {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.input-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  flex: 0 0 50px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.category-button {
+  text-align: center;
+}
+
+.form-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles for screens up to 600px */
+@media screen and (max-width: 600px) {
+  .category-form {
+    padding: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .input-field {
+    font-size: 14px;
+  }
+
+  .form-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* show.html.erb */
+
+/* Base styles for Category Details (for screens wider than 600px) */
+.show-category-details-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px; /* Adjust the maximum width as needed */
+  text-align: center;
+}
+
+.show-category-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.show-info-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.-show-category-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.show-category-actions {
+  margin-top: 20px;
+}
+
+.show-category-link {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.show-category-link:hover {
+  color: #0056b3;
+}
+
+.show-category-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.show-category-button:hover {
+  background-color: #0056b3;
+}
+
+.show-back-link {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Responsive styles (for screens up to 600px) */
+@media screen and (max-width: 600px) {
+  .show-category-heading {
+    font-size: 1.5rem;
+  }
+
+  .show-info-label {
+    font-size: 1.2rem;
+  }
+
+  .show-category-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .show-category-link {
+    font-size: 1rem;
+  }
+
+  .show-category-button {
+    font-size: 1rem;
+  }
+
+  .show-transaction-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Base styles for Edit Category (for screens wider than 600px) */
+.edit-category-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.edit_category-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.edit_category-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.edit-category-label {
+  font-weight: bold;
+  flex: 0 0 50px;
+  margin-bottom: 5px;
+}
+
+.edit_input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit_category-button {
+  text-align: center;
+}
+
+.edit_form-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.edit_form-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles (for screens up to 600px) */
+@media screen and (max-width: 600px) {
+  .edit_category-heading {
+    font-size: 1.5rem;
+  }
+
+  .edit_input-field {
+    font-size: 14px;
+  }
+
+  .edit_form-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Styling for "Back" link */
+.edit_back-link {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.edit_back-link:hover {
+  color: #333;
+}

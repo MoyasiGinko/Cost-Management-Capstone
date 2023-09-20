@@ -1,9 +1,8 @@
 class DashboardController < ApplicationController
-  before_action :authenticate_user! # Ensures only authenticated users can access the dashboard
+  before_action :authenticate_user!
 
   def index
-    # Add logic here to retrieve and display data related to the user
     @user = current_user
-    # You can fetch data from your database or any other source
+    @recent_transactions = Transaction.where(user: @user).order(created_at: :desc).limit(5)
   end
 end
