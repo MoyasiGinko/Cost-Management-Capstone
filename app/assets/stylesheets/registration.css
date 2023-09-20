@@ -1,0 +1,82 @@
+/* Add this CSS to your application.css or application.scss */
+
+/* Base styles (for screens wider than 600px) */
+.auth-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.auth-form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-label {
+  font-size: 16px;
+}
+
+.auth-field {
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.auth-password-info {
+  font-size: 12px;
+  color: #777;
+}
+
+.auth-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.auth-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .auth-form {
+    padding: auto;
+    width: auto;
+  }
+
+  .auth-label {
+    font-size: 14px;
+  }
+
+  .auth-input {
+    font-size: 14px;
+  }
+
+  .auth-password-info {
+    font-size: 11px;
+  }
+
+  .auth-button {
+    font-size: 16px;
+  }
+}

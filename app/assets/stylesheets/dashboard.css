@@ -1,0 +1,123 @@
+/* Base styles (for screens wider than 600px) */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  background-color: #3498db; /* Soft blue color */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.dashboard-header:hover {
+  background-color: #2980b9; /* Slightly darker blue on hover */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif; /* Use a smooth font like Lato */
+}
+
+p {
+  font-size: 1.2rem;
+  color: #eb8525; /* Softer gray color */
+}
+
+.user-profile {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #3498db; /* Soft blue border */
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.profile-image:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-details {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.dashboard-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-links {
+  text-decoration: none; /* Remove default underline styles */
+  margin-top: 20px;
+  background-color: #007bff; /* Background color */
+  color: #fff; /* Text color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the button */
+  display: block; /* Display as inline-block to fit content */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+
+  /* Add a box shadow for a card-like appearance */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  /* Center align text */
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.dashboard-links:hover {
+  background-color: #0056b3; /* Background color on hover */
+}
+
+
+/* Responsive styles (for screens up to 600px) */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-name {
+    font-size: 1.2rem;
+  }
+
+  .profile-details {
+    font-size: 1rem;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+}
