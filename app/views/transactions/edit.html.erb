@@ -1,0 +1,22 @@
+<!-- app/views/transactions/edit.html.erb -->
+<h1>Edit Transaction</h1>
+<%= form_with(model: [@category, @transaction], local: true) do |form| %>
+  <!-- Transaction fields to edit -->
+  <div class="field">
+    <%= form.label :name, 'Name' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount, 'Amount' %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <!-- Add any other fields you want to edit -->
+
+  <div class="actions">
+    <%= form.submit 'Update Transaction' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', category_transactions_path(@category) %>

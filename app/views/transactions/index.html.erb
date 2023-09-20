@@ -1,4 +1,9 @@
 <h1>Transactions</h1>
+<p><strong>Name:</strong> <%= @category.name %></p>
+<% if @category.icon.present? %>
+  <p><strong>Logo:</strong> <%= image_tag(@category.icon, width: 100, height: 100) %></p>
+<% end %>
+<p><strong>Total Transactions Amount:</strong> <%= number_to_currency(@category.transactions.sum(:amount)) %></p>
 
 <table>
   <thead>
@@ -15,7 +20,12 @@
         <td><%= transaction.name %></td>
         <td><%= number_to_currency(transaction.amount) %></td>
         <td><%= transaction.category.name %></td>
-
+        <td>
+          <%= link_to 'Modify', category_transaction_path(transaction.category, transaction) %>
+          <%= form_with url: category_transaction_path(transaction.category, transaction), method: :delete, remote: true do |form| %>
+            <%= form.submit "Delete" %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

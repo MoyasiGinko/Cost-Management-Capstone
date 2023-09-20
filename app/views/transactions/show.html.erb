@@ -17,4 +17,6 @@
   </tbody>
 </table>
 
-<%= link_to 'Back to Transactions', transactions_path %>
+<%= link_to "Edit", edit_category_transaction_path(category_id: @category.id) %>
+<br>
+<%= link_to 'Back to Transactions', category_transactions_path %>
