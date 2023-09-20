@@ -22,14 +22,17 @@
         <a href="<%= categories_path %>" class="dashboard-links">
             <h2>Got to CMS</h2>
         </a>
-
-
         <div class="dashboard-content">
             <h2>Your Recent Activity</h2>
-            <ul>
-                <li>Recent transaction details go here.</li>
-                <li>Another recent activity item.</li>
-                <!-- Add more activity items as needed -->
+            <ul class="activities">
+                <% @recent_transactions.each do |transaction| %>
+                <li class="activity-card">
+                    <%= transaction.name %> - <%= number_to_currency(transaction.amount) %>
+                    <span class="transaction-date">
+                    <%= time_ago_in_words(transaction.created_at) %> ago
+                    </span>
+                </li>
+                <% end %>
             </ul>
         </div>
     </div>

@@ -121,3 +121,47 @@ p {
     padding: 15px;
   }
 }
+
+/* Dashboard Content Styles */
+.dashboard-content {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Recent Activity List Styles */
+.activities {
+  list-style: none;
+  padding: 0;
+}
+
+/* Activity Card Styles */
+.activity-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Transaction Date Styles */
+.transaction-date {
+  color: #777;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  /* Adjust padding and margin for smaller screens */
+  .dashboard-content {
+    padding: 10px;
+  }
+
+  /* Reduce font size for smaller screens */
+  .activity-card {
+    font-size: 14px;
+  }
+}
