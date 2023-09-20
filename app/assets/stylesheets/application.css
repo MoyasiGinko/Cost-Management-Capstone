@@ -16,3 +16,6 @@
 @import "registration";
 @import "sessions";
 @import "dashboard";
+@import "categories";
+@import "transactions";
+@import "profile";

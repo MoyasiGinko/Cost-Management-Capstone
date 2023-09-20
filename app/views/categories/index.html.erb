@@ -1,18 +1,28 @@
-<h1>Categories</h1>
+<h1 id="categories-heading">Categories</h1>
 
-<ul>
+<ul id="categories-list" class="card-list">
   <% @categories.each do |category| %>
-    <li>
-      <strong>Name:</strong> <%= category.name %><br>
-      <% if category.icon.present? %>
-        <strong>Logo:</strong> <%= image_tag(category.icon, width: 100, height: 100) %><br>
-      <% end %>
-      <strong>Total Transactions Amount:</strong> <%= number_to_currency(category.transactions.sum(:amount)) %><br>
-      <%= link_to "View Transactions", category_transactions_path(category) %>
-      <%= link_to "More", category_path(category) %>
-
+    <li class="category-item">
+      <div class="category-card">
+        <% if category.icon.present? %>
+          <div class="category-logo">
+            <%= image_tag(category.icon, class: 'category-image', width: 100, height: 100) %>
+          </div>
+        <% end %>
+        <div class="category-details">
+          <strong class="category-name"><%= category.name %></strong><br>
+          <strong class="category-amount">Total:
+          <%= number_to_currency(category.transactions.sum(:amount)) %></strong><br>
+          <div class="category-links">
+            <%= link_to "View Transactions", category_transactions_path(category), class: 'category-link' %>
+            <%= link_to "More", category_path(category), class: 'category-link' %>
+          </div>
+        </div>
+      </div>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Add a New Category", new_category_path %>
+<%= link_to "Add a New Category", new_category_path, class: 'add-category-link' %>
+
+<%= link_to "Back to Dashboard", root_path, class: 'back-link' %>

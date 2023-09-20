@@ -1,22 +1,33 @@
 <!-- app/views/transactions/edit.html.erb -->
-<h1>Edit Transaction</h1>
-<%= form_with(model: [@category, @transaction], local: true) do |form| %>
-  <!-- Transaction fields to edit -->
-  <div class="field">
-    <%= form.label :name, 'Name' %>
-    <%= form.text_field :name %>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Transaction</title>
+</head>
+<body>
+  <h1 class="edit-transaction-heading">Edit Transaction</h1>
 
-  <div class="field">
-    <%= form.label :amount, 'Amount' %>
-    <%= form.text_field :amount %>
-  </div>
+  <%= form_with(model: [@category, @transaction], local: true, class: 'edit-transaction-form') do |form| %>
+    <!-- Transaction fields to edit -->
+    <div class="edit-transaction-field">
+      <%= form.label :name, 'Name', class: 'edit-transaction-label' %>
+      <%= form.text_field :name, class: 'edit-transaction-input' %>
+    </div>
 
-  <!-- Add any other fields you want to edit -->
+    <div class="edit-transaction-field">
+      <%= form.label :amount, 'Amount', class: 'edit-transaction-label' %>
+      <%= form.text_field :amount, class: 'edit-transaction-input' %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit 'Update Transaction' %>
-  </div>
-<% end %>
+    <!-- Add any other fields you want to edit -->
 
-<%= link_to 'Back', category_transactions_path(@category) %>
+    <div class="edit-transaction-actions">
+      <%= form.submit 'Update Transaction', class: 'edit-transaction-button' %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Back', category_transactions_path(@category), class: 'edit-transaction-link' %>
+</body>
+</html>
