@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
-  #   before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
-    @categories = Category.includes(:transactions).all
+    @categories = current_user.categories.includes(:transactions)
   end
 
   def new
