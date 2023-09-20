@@ -3,6 +3,7 @@
 require 'rails_helper'
 
 RSpec.feature 'Category Show Page' do
+  include ActionView::Helpers::NumberHelper
   scenario 'Visiting the category show page' do
     # Create necessary data for the category
     user = create_user(name: 'John Doe', email: 'example@bd.com', password: '123456')
