@@ -52,19 +52,17 @@
 .category-amount {
   margin-top: 10px;
   color: #239b55; /* Slightly darker text */
-  
 }
 
 .category-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   margin-top: 10px;
 }
 
 .category-link {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -78,7 +76,7 @@
   display: block;
   text-align: center;
   margin-top: 20px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -163,7 +161,7 @@
 }
 
 .form-button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -195,100 +193,101 @@
   }
 }
 
-/*show.html.erb*/
+/* show.html.erb */
+
 /* Base styles for Category Details (for screens wider than 600px) */
 .show-category-details-container {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px; /* Adjust the maximum width as needed */
-    text-align: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px; /* Adjust the maximum width as needed */
+  text-align: center;
 }
 
 .show-category-heading {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .show-info-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .-show-category-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .show-category-actions {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .show-category-link {
-    color: #007BFF;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .show-category-link:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 .show-category-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .show-category-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .show-back-link {
-    display: block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
 }
 
 /* Responsive styles (for screens up to 600px) */
 @media screen and (max-width: 600px) {
-    .show-category-heading {
-        font-size: 1.5rem;
-    }
+  .show-category-heading {
+    font-size: 1.5rem;
+  }
 
-    .show-info-label {
-        font-size: 1.2rem;
-    }
+  .show-info-label {
+    font-size: 1.2rem;
+  }
 
-    .show-category-image {
-        width: 80px;
-        height: 80px;
-    }
+  .show-category-image {
+    width: 80px;
+    height: 80px;
+  }
 
-    .show-category-link {
-        font-size: 1rem;
-    }
+  .show-category-link {
+    font-size: 1rem;
+  }
 
-    .show-category-button {
-        font-size: 1rem;
-    }
+  .show-category-button {
+    font-size: 1rem;
+  }
 
-    .show-transaction-heading {
-        font-size: 1.5rem;
-    }
+  .show-transaction-heading {
+    font-size: 1.5rem;
+  }
 }
 
 /* Base styles for Edit Category (for screens wider than 600px) */
@@ -335,7 +334,7 @@
 }
 
 .edit_form-button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;

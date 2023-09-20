@@ -21,7 +21,6 @@
   justify-content: space-between;
   gap: 20px;
   align-items: center;
-
 }
 
 .transactions-category-name {
@@ -94,7 +93,7 @@
 
 .transaction-link:hover,
 .transaction-button:hover {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
 }
 
@@ -103,7 +102,7 @@
   text-align: center;
   align-items: center;
   margin-top: 20px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -113,7 +112,7 @@
 }
 
 .new-transaction-link:hover {
-  background-color: #0069D9;
+  background-color: #0069d9;
 }
 
 .back-link {
@@ -184,7 +183,7 @@
 }
 
 .new-transaction-button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -264,7 +263,7 @@
 .show-transaction-link {
   display: inline-block;
   text-decoration: none;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -357,7 +356,7 @@
 }
 
 .edit-transaction-button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -375,7 +374,7 @@
   display: block;
   text-align: center;
   margin-top: 10px;
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;

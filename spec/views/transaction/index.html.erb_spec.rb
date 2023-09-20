@@ -46,7 +46,9 @@ RSpec.describe 'transactions/index.html.erb', type: :view do
     render
 
     # Check if the delete form exists for the transaction
-    expect(rendered).to have_selector("form[action='#{category_transaction_path(transaction.category, transaction)}'][method='post']", count: 1) # Adjust 'post' to the actual HTTP method used for delete
+    expect(rendered).to have_selector(
+      "form[action='#{category_transaction_path(transaction.category, transaction)}'][method='post']", count: 1
+    )
     expect(rendered).to have_button('Delete')
   end
 end
