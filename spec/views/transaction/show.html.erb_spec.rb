@@ -1,9 +1,9 @@
 # spec/features/transaction_show_spec.rb
 
 require 'rails_helper'
-include ActionView::Helpers::NumberHelper # Include the NumberHelper module
 
 RSpec.feature 'Transaction Show Page' do
+  include ActionView::Helpers::NumberHelper # Include the NumberHelper module
   scenario 'Visiting the transaction show page' do
     # Create necessary data for the transaction
     user = create_user(name: 'John Doe', email: 'example@bd.com', password: '123456')
