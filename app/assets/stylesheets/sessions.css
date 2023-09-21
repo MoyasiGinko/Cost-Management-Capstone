@@ -5,6 +5,7 @@
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
+  color: aliceblue;
 }
 
 .auth-container {
@@ -45,24 +46,12 @@
 }
 
 .auth-actions {
-  margin-top: 20px;
   text-align: center;
 }
 
-.auth-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.auth-button:hover {
+/* .auth-button:hover {
   background-color: #0056b3;
-}
+} */
 
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {

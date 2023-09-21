@@ -1,6 +1,15 @@
-<h2 class="auth-heading">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'auth-form' }) do |f| %>
+  <div class="auth-nav">
+    <div class="auth-back-link">
+      <%= link_to "Back", root_path, class: 'auth-button' %>
+    </div>
+    <h2 class="auth-heading">Log in</h2>
+    <div class="actions auth-actions">
+      <%= f.submit "Next", class: 'auth-button' %>
+    </div>
+  </div>
+  
   <div class="field auth-field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'auth-input' %>
@@ -18,11 +27,8 @@
     </div>
   <% end %>
 
-  <div class="actions auth-actions">
-    <%= f.submit "Log in", class: 'auth-button' %>
-  </div>
 <% end %>
 
-<div class="auth-actions">
+<div class="auth-action-links">
   <%= render "devise/shared/links" %>
 </div>
