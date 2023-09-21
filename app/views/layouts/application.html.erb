@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= yield(:title) || 'CostManagement - CMS' %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
+    <%= javascript_importmap_tags %>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Navigation Bar Styles */
+        header {
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: #fff;
+            padding: 10px 0;
+            align-items: center;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: space-between;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ecf0f1;
+        }
+
+        .alert {
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .alert-success {
+            background-color: #5cb85c;
+            color: #fff;
+        }
+
+        .alert-danger {
+            background-color: #d9534f;
+            color: #fff;
+        }
+
+        .app-profile-auth {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .sign-out-button {
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 6px 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dashboard-nav {
+            font-size: 1.3rem;
+            padding: 0 10px;
+        }
+
+        .profile-nav {
+            font-size: 1.3rem;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<% if user_signed_in? %>
+  <header>
+      <nav>
+          <ul class="nav-links">
+              <li><%= link_to 'Dashboard', root_path, class: 'dashboard-nav' %></li>
+              <li class="app-profile-auth">
+                <a><%= link_to 'Profile', edit_user_registration_path, class: 'profile-nav' %></a>
+                <a><%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'sign-out-button' %></a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+<% end %>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+<%= yield %>
+
+</body>
+</html>

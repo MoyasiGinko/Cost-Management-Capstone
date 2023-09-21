@@ -1,0 +1,40 @@
+<h1 class="transactions-heading">Transactions</h1>
+
+<div class="transactions-category">
+  <div class="transactions-category-logo-name">  
+    <% if @category.icon.present? %>
+    <div class="transactions-category-logo">
+      <strong><%= image_tag(@category.icon, class: 'transactions-category-image', width: 100, height: 100) %></strong>
+    </div>
+    <div class="transactions-category-name">
+      <strong><%= @category.name %></strong>
+    </div>
+    <% end %>
+  </div>
+  <div class="transactions-total-amount">
+    <strong>Total: <%= number_to_currency(@category.transactions.sum(:amount)) %></strong>
+  </div>
+</div>
+
+<div class="transactions-card-container">
+  <% @transactions.each do |transaction| %>
+    <div class="transaction-card">
+      <div class="transaction-card-header">
+        <div class="transaction-card-name"><%= transaction.name %></div>
+        <div class="transaction-card-amount"><%= number_to_currency(transaction.amount) %></div>
+      </div>
+      <div class="transaction-card-created-at">
+        <strong><%= time_ago_in_words(transaction.created_at) %> ago</strong>
+      </div>
+      <div class="transaction-card-actions">
+        <%= link_to 'Modify', category_transaction_path(transaction.category, transaction), class: 'transaction-link' %>
+        <%= form_with(url: category_transaction_path(transaction.category, transaction), method: :delete, remote: true, class: 'transaction-form') do |form| %>
+          <%= form.submit "Delete", class: 'transaction-button' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Transaction', new_category_transaction_path(category_id: @category.id), class: 'new-transaction-link' %><br>
+<%= link_to 'Back to Categories', categories_path, class: 'back-link' %>

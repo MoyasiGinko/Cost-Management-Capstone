@@ -1,0 +1,19 @@
+<h1 class="new-transaction-heading">New Transaction</h1>
+
+<%= form_with(model: [@category, @transaction], local: true, class: 'new-transaction-form') do |form| %>
+  <div class="new-transaction-field">
+    <%= form.label :name, 'Name', class: 'new-transaction-label' %>
+    <%= form.text_field :name, class: 'new-transaction-input', placeholder: 'Put transaction name here' %>
+  </div>
+
+  <div class="new-transaction-field">
+    <%= form.label :amount, 'Amount', class: 'new-transaction-label' %>
+    <%= form.text_field :amount, class: 'new-transaction-input', placeholder: 'Put your amount here' %>
+  </div>
+
+  <div class="new-transaction-actions">
+    <%= form.submit 'Create Transaction', class: 'new-transaction-button' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', category_transactions_path(category_id: @category.id), class: 'new-transaction-back-link' %>

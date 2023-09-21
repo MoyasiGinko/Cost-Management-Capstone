@@ -1,0 +1,34 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'auth-form' }) do |f| %>
+  <div class="auth-nav">
+    <div class="auth-back-link">
+      <%= link_to "Back", root_path, class: 'auth-button' %>
+    </div>
+    <h2 class="auth-heading">Log in</h2>
+    <div class="actions auth-actions">
+      <%= f.submit "Next", class: 'auth-button' %>
+    </div>
+  </div>
+  
+  <div class="field auth-field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'auth-input' %>
+  </div>
+
+  <div class="field auth-field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: 'auth-input' %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field auth-field">
+      <%= f.check_box :remember_me, class: 'auth-checkbox' %>
+      <%= f.label :remember_me, class: 'auth-label' %>
+    </div>
+  <% end %>
+
+<% end %>
+
+<div class="auth-action-links">
+  <%= render "devise/shared/links" %>
+</div>

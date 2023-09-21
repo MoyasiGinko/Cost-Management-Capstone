@@ -1,0 +1,19 @@
+<h1 class="edit_category-heading">Edit Category</h1>
+
+<%= form_with(model: @category, local: true, html: { class: 'edit-category-form' }) do |form| %>
+  <div class="edit_category-input">
+    <%= form.label :name, class: 'edit-category-label' %>
+    <%= form.text_field :name, class: 'edit_input-field' %>
+  </div>
+
+  <div class="edit_category-input">
+    <%= form.label :icon, class: 'edit-category-label' %>
+    <%= form.url_field :icon, class: 'edit_input-field' %>
+  </div>
+
+  <div class="edit_category-actions">
+    <%= form.submit "Update Category", class: 'edit_form-button' %>
+  </div>
+<% end %>
+
+<%= link_to "Back", category_path(@category), class: 'edit_back-link' %>

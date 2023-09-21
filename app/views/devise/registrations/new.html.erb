@@ -1,0 +1,42 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'auth-form' }) do |f| %>
+  <div class="auth-nav">
+    <div class="auth-back-link">
+      <%= link_to "Back", root_path, class: 'auth-button' %>
+    </div>
+    <h2 class="auth-heading">Register</h2>
+    <div class="auth-actions">
+        <%= f.submit "Next", class: 'auth-button' %>
+    </div>
+  </div>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="auth-field">
+    <%= f.label :name, class: 'auth-label' %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'auth-input' %>
+  </div>
+
+  <div class="auth-field">
+    <%= f.label :email, class: 'auth-label' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'auth-input' %>
+  </div>
+
+  <div class="auth-field">
+    <%= f.label :password, class: 'auth-label' %>
+    <% if @minimum_password_length %>
+    <em class="auth-password-info">(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: 'auth-input' %>
+  </div>
+
+  <div class="auth-field">
+    <%= f.label :password_confirmation, class: 'auth-label' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'auth-input' %>
+  </div>
+
+
+<% end %>
+
+<div class="auth-action-links">
+  <%= render "devise/shared/links", class: 'auth-button' %>
+</div>

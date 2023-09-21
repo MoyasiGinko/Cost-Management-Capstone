@@ -1,0 +1,20 @@
+<div class="category-form">
+  <%= form_with(model: @category, local: true, html: { class: 'category-form-inner' }) do |form| %>
+    <div class="category-input">
+      <%= form.label :name, class: 'input-label' %>
+      <%= form.text_field :name, class: 'input-field', placeholder: 'Put your category name here' %>
+    </div>
+
+    <div class="category-input">
+      <%= form.label :icon, class: 'input-label' %>
+      <%= form.url_field :icon, class: 'input-field', placeholder: 'Put your image url here' %>
+    </div>
+
+    <div class="category-button">
+      <%= form.submit "Create Category", class: 'form-button' %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Back", categories_path, class: 'back-link' %>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Details</title>
+</head>
+<body>
+  <h1 class="show-transaction-heading">Transaction Details</h1>
+
+  <table class="show-transaction-table">
+    <tbody>
+      <tr>
+        <th class="show-transaction-label">Name:</th>
+        <td class="show-transaction-data"><%= @transaction.name %></td>
+      </tr>
+      <tr>
+        <th class="show-transaction-label">Amount:</th>
+        <td class="show-transaction-data"><%= number_to_currency(@transaction.amount) %></td>
+      </tr>
+      <tr>
+        <th class="show-transaction-label">Category:</th>
+        <td class="show-transaction-data"><%= @transaction.category.name %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="show-transaction-actions">
+    <%= link_to "Edit", edit_category_transaction_path(category_id: @category.id), class: 'show-transaction-link' %>
+    <br>
+    <%= link_to 'Back to Transactions', category_transactions_path, class: 'show-transaction-back-link' %>
+  </div>
+</body>
+</html>
