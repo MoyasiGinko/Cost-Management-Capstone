@@ -8,7 +8,8 @@ services:
     name: rails
     plan: free
     env: ruby
-    startCommand: bundle exec rails s
+    buildCommand: "bundle install --path vendor/bundle"
+    startCommand: "bundle exec rails s -p $PORT"
     envVars:
       - key: RAILS_MASTER_KEY
         sync: false
