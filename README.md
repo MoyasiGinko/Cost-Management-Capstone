@@ -186,19 +186,19 @@ Example command:
 ### Deployment
 > To deploy this project on Heroku, follow these steps:
 
-1. Create a Heroku Account
-2. On the terminal, run `heroku login` and enter your credentials
-3. Run `heroku create` to create a new app
-4. Run `heroku push` to start a deployment on Heroku.
-5. Run `heroku run rails db:migrate` to run migrations on your production database.
-6. Visit your project URL as assigned by Heroku to see a live deployment of Cost Management - CMS.
+1. Create a Render account and create a new web service.
+2. Connect your GitHub account to Render.
+3. Select the repository you want to deploy.
+4. Render will automatically detect that this is a Ruby on Rails project and will build it accordingly.
+5. Click on "Create Web Service" and wait for the build to finish.
+6. Once the build is finished, click on "Open App" to see your live application.
 
-You can try many other options, like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
+You can try other deployment platforms like [Heroku](https://www.heroku.com/) or [Netlify](https://www.netlify.com/).
 ### Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](https://cms-cost-management.herokuapp.com/)
+[Live Demo Link](https://rails-8sbg.onrender.com/)
 
-[Presentation Video](https://www.loom.com/share/1b0b0b0b0b0b4b6e8b0b0b0b0b0b0b0b)
+[Presentation Video](https://www.loom.com/share/90bf801fe7134f3c91696308f2e89a48?sid=6c0f3195-18e7-4ef6-9704-d4019104719f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
