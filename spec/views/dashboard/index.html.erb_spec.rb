@@ -24,6 +24,6 @@ RSpec.feature 'Dashboard page' do
     visit new_user_session_path
     fill_in 'Email', with: user.email
     fill_in 'Password', with: 'password' # Assuming the password is 'password'
-    click_button 'Log in'
+    click_button 'Next'
   end
 end
